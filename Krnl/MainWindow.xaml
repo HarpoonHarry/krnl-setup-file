@@ -1,0 +1,368 @@
+<Window
+	x:Class="Krnl.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Krnl"
+	Title="MainWindow"
+	Height="350"
+	Width="550"
+	ResizeMode="NoResize"
+	WindowStyle="None"
+	Background="#FF222222"
+	WindowStartupLocation="CenterScreen"
+	Icon="AppLogo.ico">
+	<Grid
+		Loaded="Grid_Loaded">
+		<Image
+			HorizontalAlignment="Left"
+			Height="350"
+			VerticalAlignment="Top"
+			Width="550"
+			Source="images/background.png" />
+		<Border
+			BorderBrush="#19FFFFFF"
+			BorderThickness="1"
+			HorizontalAlignment="Left"
+			Height="350"
+			VerticalAlignment="Top"
+			Width="550">
+			<Grid
+				Background="#00000000">
+				<Label
+					Content="Krnl"
+					HorizontalAlignment="Center"
+					Margin="237,132,232,182"
+					VerticalAlignment="Center"
+					Foreground="#FFFFFFFF"
+					FontFamily="/Krnl;component/Fonts/#Metropalis"
+					FontSize="40"
+					Height="34"
+					Padding="0"
+					Width="79"
+					FontWeight="Bold" />
+				<Label
+					Content="Unrestricted script execution"
+					HorizontalAlignment="Left"
+					Margin="196,188,0,0"
+					VerticalAlignment="Top"
+					Foreground="#FFFFFFFF"
+					FontFamily="/Krnl;component/Fonts/#Metropolis"
+					Width="165" />
+				<Grid
+					HorizontalAlignment="Left"
+					Height="38"
+					VerticalAlignment="Top"
+					Width="550"
+					Background="#00000000">
+					<StackPanel
+						Name="DiscordButton"
+						HorizontalAlignment="Left"
+						Height="38"
+						Margin="400,0,0,0"
+						VerticalAlignment="Top"
+						Width="50"
+						Background="#00000000"
+						PreviewMouseLeftButtonDown="DiscordButton_PreviewMouseLeftButtonDown">
+						<Canvas
+							Name="svg87"
+							Width="17"
+							Height="12"
+							Margin="16,13,16,0">
+							<UIElement.RenderTransform>
+								<TranslateTransform
+									X="0"
+									Y="0" />
+							</UIElement.RenderTransform>
+							<FrameworkElement.Resources>
+								<ResourceDictionary />
+							</FrameworkElement.Resources>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path85"
+								Fill="#ffffff">
+								<Path.Data>
+									<PathGeometry
+										Figures="M14.4006 1.005C13.3002 0.5355 12.1235 0.194289 10.8934 0C10.7423 0.249071 10.5658 0.584077 10.4441 0.850574C9.13644 0.671245 7.84078 0.671245 6.55715 0.850574C6.43549 0.584077 6.25498 0.249071 6.10255 0C4.87107 0.194289 3.69308 0.536754 2.59264 1.00748C0.373039 4.06602 -0.228658 7.04858 0.072191 9.98879C1.54435 10.9913 2.97104 11.6003 4.37366 11.9988C4.71997 11.5641 5.02884 11.1021 5.29492 10.6152C4.78816 10.4396 4.30279 10.2229 3.84418 9.97137C3.96585 9.88918 4.08486 9.80324 4.19984 9.71482C6.99706 10.9079 10.0363 10.9079 12.8001 9.71482C12.9164 9.80324 13.0354 9.88918 13.1558 9.97137C12.6958 10.2242 12.2091 10.4408 11.7023 10.6165C11.9684 11.1021 12.276 11.5654 12.6236 12C14.0276 11.6015 15.4556 10.9925 16.9277 9.98879C17.2808 6.58034 16.3247 3.62516 14.4006 1.005ZM5.676 8.18059C4.8363 8.18059 4.14768 7.46576 4.14768 6.59528C4.14768 5.72479 4.8216 5.00873 5.676 5.00873C6.53042 5.00873 7.21902 5.72354 7.20432 6.59528C7.20565 7.46576 6.53042 8.18059 5.676 8.18059ZM11.3239 8.18059C10.4842 8.18059 9.79563 7.46576 9.79563 6.59528C9.79563 5.72479 10.4695 5.00873 11.3239 5.00873C12.1783 5.00873 12.867 5.72354 12.8523 6.59528C12.8523 7.46576 12.1783 8.18059 11.3239 8.18059Z"
+										FillRule="NonZero" />
+								</Path.Data>
+							</Path>
+						</Canvas>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#55777777" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#00777777" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</StackPanel>
+					<StackPanel
+						Name="MinimizeButton"
+						HorizontalAlignment="Left"
+						Height="38"
+						Margin="450,0,0,0"
+						VerticalAlignment="Top"
+						Width="50"
+						Background="#00000000"
+						PreviewMouseLeftButtonDown="MinimizeButton_PreviewMouseLeftButtonDown">
+						<Canvas
+							Name="svg376"
+							Margin="0,7,13,0"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Top"
+							Width="24"
+							Height="24">
+							<UIElement.RenderTransform>
+								<TranslateTransform
+									X="0"
+									Y="0" />
+							</UIElement.RenderTransform>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path374"
+								Fill="#FFFFFFFF">
+								<Path.Data>
+									<PathGeometry
+										Figures="M17 12H7V11H17V12Z"
+										FillRule="EvenOdd" />
+								</Path.Data>
+							</Path>
+						</Canvas>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#55777777" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#00777777" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</StackPanel>
+					<StackPanel
+						Name="CloseButton"
+						HorizontalAlignment="Left"
+						Height="38"
+						Margin="500,0,0,0"
+						VerticalAlignment="Top"
+						Width="50"
+						Background="#00FF0000"
+						PreviewMouseLeftButtonDown="CloseButton_PreviewMouseLeftButtonDown">
+						<Canvas
+							Name="svg276"
+							Width="24"
+							Height="24"
+							Margin="14,7,13,0"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Right">
+							<UIElement.RenderTransform>
+								<TranslateTransform
+									X="0"
+									Y="0" />
+							</UIElement.RenderTransform>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path274"
+								Stroke="#FFFFFFFF">
+								<Path.Data>
+									<PathGeometry
+										Figures="M17 7L7 17M7 7L17 17"
+										FillRule="NonZero" />
+								</Path.Data>
+							</Path>
+						</Canvas>
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseEnter">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#CCFF0000" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+							<EventTrigger
+								RoutedEvent="UIElement.MouseLeave">
+								<BeginStoryboard>
+									<Storyboard
+										TargetProperty="Background.Color">
+										<ColorAnimation
+											Duration="0:0:0.1"
+											To="#00FF0000" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</StackPanel>
+					<StackPanel
+						HorizontalAlignment="Left"
+						Height="38"
+						VerticalAlignment="Top"
+						Width="38">
+						<Canvas
+							Name="svg26"
+							Width="16"
+							Height="16"
+							Margin="0,11,0,0">
+							<UIElement.RenderTransform>
+								<TranslateTransform
+									X="0"
+									Y="0" />
+							</UIElement.RenderTransform>
+							<FrameworkElement.Resources>
+								<ResourceDictionary />
+							</FrameworkElement.Resources>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path22"
+								Stroke="#FFD5D5D5"
+								StrokeMiterLimit="10">
+								<Path.Data>
+									<PathGeometry
+										Figures="M3.66666 10C3.66666 11.1493 4.1232 12.2515 4.93586 13.0641C5.74852 13.8768 6.85072 14.3333 7.99999 14.3333C9.14926 14.3333 10.2515 13.8768 11.0641 13.0641C11.8768 12.2515 12.3333 11.1493 12.3333 10C12.3333 5.58001 7.99999 2.33334 7.99999 2.33334C7.99999 2.33334 3.66666 5.58001 3.66666 10Z"
+										FillRule="NonZero" />
+								</Path.Data>
+							</Path>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path24"
+								Stroke="#FFD5D5D5"
+								StrokeMiterLimit="10"
+								StrokeStartLineCap="Round"
+								StrokeEndLineCap="Round">
+								<Path.Data>
+									<PathGeometry
+										Figures="M2.8 11.2C1.92 11.9333 1.46667 12.5733 1.65334 12.96C2.04667 13.7933 5.2 13.1467 8.70667 11.5133C12.2133 9.88 14.7067 7.87333 14.3467 7.04C14.1867 6.7 13.5667 6.60666 12.6533 6.72666"
+										FillRule="NonZero" />
+								</Path.Data>
+							</Path>
+						</Canvas>
+					</StackPanel>
+					<Grid
+						HorizontalAlignment="Left"
+						Height="38"
+						VerticalAlignment="Top"
+						Width="400"
+						Background="#00000000"
+						PreviewMouseLeftButtonDown="Grid_MouseLeftButtonDown" />
+				</Grid>
+				<Grid
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="0,276,0,0"
+					VerticalAlignment="Top"
+					Width="548"
+					Background="#7F000000">
+					<UIElement.Effect>
+						<BlurEffect
+							Radius="12"
+							RenderingBias="Quality" />
+					</UIElement.Effect>
+					<Image
+						HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+						Source="images/background.png"
+						Stretch="UniformToFill" />
+				</Grid>
+				<Grid
+					HorizontalAlignment="Left"
+					Height="73"
+					VerticalAlignment="Top"
+					Width="550"
+					Background="#992C2C2C"
+					Margin="-1,276,-1,-1">
+					<Label
+						Name="Message"
+						Content="Checking for updates..."
+						HorizontalAlignment="Left"
+						Margin="77,14,0,0"
+						VerticalAlignment="Top"
+						Foreground="#FFFFFFFF"
+						Padding="0"
+						FontFamily="/Krnl;component/Fonts/#Inter" />
+					<StackPanel
+						Name="ProgressBarHolder"
+						HorizontalAlignment="Left"
+						Height="4"
+						Margin="77,36,0,0"
+						VerticalAlignment="Top"
+						Width="433"
+						Background="#FFFFFFFF">
+						<Grid
+							Name="ProgressBar"
+							Height="4"
+							Margin="0"
+							Background="#FF0066B9"
+							Width="0"
+							HorizontalAlignment="Left" />
+					</StackPanel>
+					<Label
+						Content="Waiting for response"
+						HorizontalAlignment="Left"
+						Margin="77,47,0,0"
+						VerticalAlignment="Top"
+						Foreground="#FF787878"
+						Padding="0"
+						FontFamily="/Krnl;component/Fonts/#Inter" />
+					<Border
+						BorderBrush="#FF0066B9"
+						BorderThickness="0"
+						HorizontalAlignment="Left"
+						Height="33"
+						Margin="22,20,0,0"
+						VerticalAlignment="Top"
+						Width="33"
+						CornerRadius="50"
+						Background="#FF0066B9">
+						<Canvas
+							Name="svg46"
+							Width="9"
+							Height="14">
+							<UIElement.RenderTransform>
+								<TranslateTransform
+									X="0"
+									Y="0" />
+							</UIElement.RenderTransform>
+							<FrameworkElement.Resources>
+								<ResourceDictionary />
+							</FrameworkElement.Resources>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								Name="path44"
+								Stroke="#ffffff">
+								<Path.Data>
+									<PathGeometry
+										Figures="M4.5 0V11M4.5 11L8.5 7M4.5 11L0.5 7M0 13.5H9"
+										FillRule="NonZero" />
+								</Path.Data>
+							</Path>
+						</Canvas>
+					</Border>
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</Window>
